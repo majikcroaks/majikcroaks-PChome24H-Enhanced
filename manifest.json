@@ -1,0 +1,15 @@
+{
+    "manifest_version": 3,
+    "name": "PChome24H Enhanced",
+    "author": "Jimmy Huang",
+    "description": "A Chrome extension to enhance PChome24H.",
+    "version": "1.0",
+    "icons": { "16": "icon_16.png", "48": "icon_48.png", "128": "icon_128.png" },
+    "content_scripts": [
+        {
+            "matches": ["*://24h.pchome.com.tw/store/*"],
+            "js": ["content.js"]
+        }
+    ],
+    "permissions": ["activeTab"]
+}
