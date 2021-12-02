@@ -45,6 +45,7 @@ const debounce = (fn, delay = 1000) => {
 };
 
 // Price filter function.
+let result;
 const priceFilter = function (eventTarget) {
     console.log(eventTarget);
     // Get the prices of listed items.
@@ -52,7 +53,6 @@ const priceFilter = function (eventTarget) {
         `li:not([class=${keyword}]) > .price > .value`
     );
     // Clean the previous result if any.
-    let result;
     if (result) {
         let items = listView.querySelectorAll(".col3f");
         items.forEach((item) => item.classList.remove(keyword));
